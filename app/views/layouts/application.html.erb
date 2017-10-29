@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyBlog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="container">
+  		<a href="<%= root_path %>">index</a>
+  		<a href="<%= about_index_path %>">About me</a>
+    <%= yield %>
+    	<h2>Footer</h2>
+	</div>
+  </body>
+</html>
