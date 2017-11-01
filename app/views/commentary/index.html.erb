@@ -1,0 +1,10 @@
+<h3>Ну да криво косо, но как получилось)))И так еле сделал)))</h3><br>
+<% @commentaries.find_each do |coment| %>
+	
+	<% if coment.user.moderator == true %>
+		<h4>Author '<%= coment.user.name.capitalize %>' is a moderator <%= coment.user.moderator %></h4>
+		<p><%= coment.body.delete '[""]' %></p>
+		<br>
+	<% end %>
+
+<% end %>
